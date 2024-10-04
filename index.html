@@ -4,19 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Selecting</title>
+
+    <link rel="stylesheet" href="css/bootstrapCode.css" />
     <link rel="stylesheet" href="css/app.css" />
 
     <script src="js/app.js" defer></script>
   </head>
 
   <body>
+    <button class="btn btn-info">Cucu Bootstrap em Bom</button>
+
+    <button class="btn btn-danger" onclick="dangerLevel()" id="myBtn">Cucu Bootstrap perigoso</button>
+    
     <h2 style="text-align: end">
       <b>Olá </b><span id="my-welcome-name"></span>
     </h2>
-    <div style="text-align:end;">
+    <div style="text-align: end">
       <img
         id="my-photo"
-        style="width: 55px; height: 55px;"
+        style="width: 55px; height: 55px"
         src="/images/nophoto.jpg"
         alt=""
       />
@@ -48,6 +54,10 @@
       to keep as pets. They are suitable for children, but like any pet, should
       be handled with care.
     </p>
+
+    <h2 class="myChanges">Animações do Pedro</h2>
+
+    <h2 class="myChanges">Cesae do Marco</h2>
     <div id="toc" role="navigation" aria-labelledby="mw-toc-heading">
       <input
         type="checkbox"
