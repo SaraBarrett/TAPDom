@@ -21,14 +21,12 @@
 // let mySpan = document.getElementById('my-welcome-name');
 //let myPickles =document.querySelector('span');
 
-
 // console.log(myPhoto)
 // if(myBannerSelector){
 //     //console.log(myBannerSelector.getAttribute('src'));
 //     console.log(myBannerSelector.src);
 //     myBannerSelector.src = '../images/assesement.jpeg';
 // }
-
 
 // if(myPickles){
 //     myPickles.innerText = 'yack';
@@ -39,8 +37,6 @@
 //     console.log(myText.getAttribute('id'))
 //     myText.id = 'testesMudarAtributos';
 // }
-
-
 
 // let login = false;
 // let myName = null;
@@ -55,7 +51,6 @@
 //     login == true;
 //     userPhoto = '../images/assesement.jpeg';
 
-
 //     mySpan.innerText = myName;
 
 //     if(userPhoto){
@@ -64,10 +59,8 @@
 
 // }
 
-
 //selecciona o elemento
 // let myEggOrChickenImg = document.querySelector('img');
-
 
 // function myEggOrChicken(){
 //     if(myEggOrChickenImg.src == 'https://devsprouthosting.com/images/chicken.jpg'){
@@ -80,11 +73,9 @@
 
 // }
 
-
 //seleccionar o olá do index.html
 // let myBold = document.querySelector('b');
 // myBold.style.color = '#132fba';
-
 
 // function changeStyle(){
 //     let myContainer = document.querySelector('#container');
@@ -94,3 +85,33 @@
 //     myImg.style.width = '150px';
 //     myImg.style.borderRadius = '50%';
 // }
+
+function changeHighlight() {
+  let lis = document.querySelectorAll("li");
+
+  for (li of lis) {
+    if (li.classList.contains("highlight")) {
+      li.classList.remove("highlight");
+    } else {
+      li.classList.add("highlight");
+    }
+  }
+}
+
+// let myImage = document.querySelector("#my-photo");
+// console.log(myImage.parentElement);
+// myImage.parentElement.style.backgroundColor = "blue";
+
+// let myDiv = document.querySelector("#toc");
+// console.log(myDiv.children);
+
+// let brother = document.querySelector("#my-welcome-name");
+// brother.previousSibling.style.color = "violet";
+
+let myImage = document.createElement("img");
+console.log(myImage);
+myImage.src = "../images/nophoto.jpg";
+myImage.classList.add("myPhotoImg");
+
+let myDiv = document.querySelector("#space-for-image");
+myDiv.appendChild(myImage);
