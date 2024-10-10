@@ -86,11 +86,11 @@
 // myBold.style.color = '#132fba';
 
 
-function changeStyle(){
-    let myContainer = document.querySelector('#container');
-    let myImg = document.querySelector('img');
+// function changeStyle(){
+//     let myContainer = document.querySelector('#container');
+//     let myImg = document.querySelector('img');
 
-    myContainer.style.textAlign = 'center';
-    myImg.style.width = '150px';
-    myImg.style.borderRadius = '50%';
-}
+//     myContainer.style.textAlign = 'center';
+//     myImg.style.width = '150px';
+//     myImg.style.borderRadius = '50%';
+// }
