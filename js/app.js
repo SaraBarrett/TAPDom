@@ -108,10 +108,49 @@ function changeHighlight() {
 // let brother = document.querySelector("#my-welcome-name");
 // brother.previousSibling.style.color = "violet";
 
-let myImage = document.createElement("img");
-console.log(myImage);
-myImage.src = "../images/nophoto.jpg";
-myImage.classList.add("myPhotoImg");
+// let myImage = document.createElement("img");
+// console.log(myImage);
+// myImage.src = "../images/nophoto.jpg";
+// myImage.classList.add("myPhotoImg");
 
-let myDiv = document.querySelector("#space-for-image");
-myDiv.appendChild(myImage);
+// let myDiv = document.querySelector("#space-for-image");
+// myDiv.appendChild(myImage);
+// let myHello = document.querySelector('#myHello');
+// myHello.append('Pessoa');
+
+// for (i = 1; i <= 100; i++) {
+//   let myBtn = document.createElement("button");
+//   myBtn.innerText = "botão nr " + i;
+//   if (i == 46) {
+//     myBtn.style.backgroundColor = "red";
+//   }
+
+//   let myDiv = document.querySelector("#container");
+//   myDiv.appendChild(myBtn);
+// }
+
+// let myLi = document.querySelectorAll('.toclevel-1');
+// console.log(myLi)
+// for(item of myLi){
+
+//     item.remove();
+// }
+
+function dangerLevel() {
+  if (myBtn.classList.contains("btn-danger")) {
+    myBtn.classList.remove("btn-danger"); //remove classe do elemento
+    myBtn.classList.add("btn-warning"); // adiciona classe ao elemento
+  } else {
+    myBtn.classList.remove("btn-warning");
+    myBtn.classList.add("btn-danger");
+  }
+}
+
+function hello() {
+  alert("sou js e sou awesome!");
+}
+
+let myBtnDanger = document.querySelector("#myBtn");
+
+myBtnDanger.addEventListener("mouseover", dangerLevel);
+myBtnDanger.addEventListener("click", hello);
