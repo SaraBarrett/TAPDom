@@ -136,21 +136,41 @@ function changeHighlight() {
 //     item.remove();
 // }
 
-function dangerLevel() {
-  if (myBtn.classList.contains("btn-danger")) {
-    myBtn.classList.remove("btn-danger"); //remove classe do elemento
-    myBtn.classList.add("btn-warning"); // adiciona classe ao elemento
-  } else {
-    myBtn.classList.remove("btn-warning");
-    myBtn.classList.add("btn-danger");
-  }
-}
+// function dangerLevel() {
+//   if (myBtn.classList.contains("btn-danger")) {
+//     myBtn.classList.remove("btn-danger"); //remove classe do elemento
+//     myBtn.classList.add("btn-warning"); // adiciona classe ao elemento
+//   } else {
+//     myBtn.classList.remove("btn-warning");
+//     myBtn.classList.add("btn-danger");
+//   }
+// }
 
-function hello() {
-  alert("sou js e sou awesome!");
-}
+// function hello() {
+//   alert("sou js e sou awesome!");
+// }
 
-let myBtnDanger = document.querySelector("#myBtn");
+// myBtnDanger.addEventListener("mouseover", dangerLevel);
+// myBtnDanger.addEventListener("click", hello);
+// let myBtnDanger = document.querySelector("#myBtn");
+// let myBtnInfo = document.querySelector(".btn-info");
 
-myBtnDanger.addEventListener("mouseover", dangerLevel);
-myBtnDanger.addEventListener("click", hello);
+// function changeColor() {
+//   this.style.backgroundColor = "red";
+// }
+
+// myBtnDanger.addEventListener("click", changeColor);
+
+// myP.addEventListener("click", changeColor);
+
+// myBtnInfo.addEventListener("click", changeColor);
+let myP = document.querySelector("p");
+
+myP.addEventListener("click", function (event) {
+  alert("cucu");
+  console.log(event);
+});
+
+window.addEventListener("scroll", function (event) {
+  console.log(event);
+});
