@@ -36,14 +36,47 @@ function changeTaste() {
   }
 }
 
-let myBanner = document.getElementById("banner");
+// let myBanner = document.getElementById("banner");
 
 //exemplo 1 de aceder ao elemento
 // console.log(myBanner.src);
 // myBanner.src = "https://upload.wikimedia.org/wikipedia/commons/6/68/Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg"
 
 //exemplo 2 de aceder ao elemento
-let myPath =  'https://upload.wikimedia.org/wikipedia/commons/6/68/Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg';
+// let myPath =  'https://upload.wikimedia.org/wikipedia/commons/6/68/Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg';
 
-console.log(myBanner.getAttribute('src'));
-myBanner.setAttribute('src',myPath)
+// console.log(myBanner.getAttribute('src'));
+// myBanner.setAttribute('src',myPath)
+
+
+function changeImg(){
+  //seleccionar a imagem. depois de seleccionar, aceder ao atributo src da imagem
+  let myImage = document.querySelector('img');
+  console.log(myImage.src)
+
+  if(myImage.src == 'https://devsprouthosting.com/images/chicken.jpg'){
+    myImage.src = 'https://devsprouthosting.com/images/egg.jpg'
+  }else{
+  //manipular a src da imagem e reatribuir um novo caminh
+    myImage.src = 'https://devsprouthosting.com/images/chicken.jpg'
+  }
+
+  let myH4 = document.querySelector('h4');
+  console.log(myH4);
+
+  myH4.style.backgroundColor = '#fffc88';
+}
+
+
+function changeImgWSet(){
+  //seleccionar a imagem. depois de seleccionar, aceder ao atributo src da imagem
+  let myImage = document.querySelector('img');
+  console.log(myImage.getAttribute('src'))
+
+  if(myImage.getAttribute('src') == 'https://devsprouthosting.com/images/chicken.jpg'){
+    myImage.setAttribute('src' , 'https://devsprouthosting.com/images/egg.jpg')
+  }else{
+  //manipular a src da imagem e reatribuir um novo caminh
+    myImage.setAttribute('src', 'https://devsprouthosting.com/images/chicken.jpg')
+  }
+}
