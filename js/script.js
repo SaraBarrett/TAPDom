@@ -121,12 +121,29 @@ function changeBox() {
 //     index = index +1;
 // }
 
-let myDiv = document.querySelector('.toctitle');
-//adicionar uma class
-// myDiv.classList.add('classChange')
+// let myDiv = document.querySelector('.toctitle');
+// //adicionar uma class
+// // myDiv.classList.add('classChange')
 
-// remove a classe
-// myDiv.classList.remove('toctitle')
+// // remove a classe
+// // myDiv.classList.remove('toctitle')
 
-//validar se tem uma classe (retorna verdadeiro ou falso - para usar p exemplo dentro de ifs)
-console.log(myDiv.classList.contains('toctitle'))
+// //validar se tem uma classe (retorna verdadeiro ou falso - para usar p exemplo dentro de ifs)
+// console.log(myDiv.classList.contains('toctitle'))
+
+function changeHighlight(){
+  let myLis = document.querySelectorAll('li');
+
+  for(let element of myLis){
+    if(element.classList.contains('highlight')){
+      //remove
+      element.classList.remove('highlight')
+    }else{
+      //add
+      element.classList.add('highlight')
+    }
+    console.log(element)
+  }
+
+}
+
