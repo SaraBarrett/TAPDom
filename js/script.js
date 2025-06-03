@@ -48,35 +48,85 @@ function changeTaste() {
 // console.log(myBanner.getAttribute('src'));
 // myBanner.setAttribute('src',myPath)
 
-
-function changeImg(){
+function changeImg() {
   //seleccionar a imagem. depois de seleccionar, aceder ao atributo src da imagem
-  let myImage = document.querySelector('img');
-  console.log(myImage.src)
+  let myImage = document.querySelector("img");
+  console.log(myImage.src);
 
-  if(myImage.src == 'https://devsprouthosting.com/images/chicken.jpg'){
-    myImage.src = 'https://devsprouthosting.com/images/egg.jpg'
-  }else{
-  //manipular a src da imagem e reatribuir um novo caminh
-    myImage.src = 'https://devsprouthosting.com/images/chicken.jpg'
+  if (myImage.src == "https://devsprouthosting.com/images/chicken.jpg") {
+    myImage.src = "https://devsprouthosting.com/images/egg.jpg";
+  } else {
+    //manipular a src da imagem e reatribuir um novo caminh
+    myImage.src = "https://devsprouthosting.com/images/chicken.jpg";
   }
 
-  let myH4 = document.querySelector('h4');
+  let myH4 = document.querySelector("h4");
   console.log(myH4);
 
-  myH4.style.backgroundColor = '#fffc88';
+  myH4.style.backgroundColor = "#fffc88";
 }
 
-
-function changeImgWSet(){
+function changeImgWSet() {
   //seleccionar a imagem. depois de seleccionar, aceder ao atributo src da imagem
-  let myImage = document.querySelector('img');
-  console.log(myImage.getAttribute('src'))
+  let myImage = document.querySelector("img");
+  console.log(myImage.getAttribute("src"));
 
-  if(myImage.getAttribute('src') == 'https://devsprouthosting.com/images/chicken.jpg'){
-    myImage.setAttribute('src' , 'https://devsprouthosting.com/images/egg.jpg')
-  }else{
-  //manipular a src da imagem e reatribuir um novo caminh
-    myImage.setAttribute('src', 'https://devsprouthosting.com/images/chicken.jpg')
+  if (
+    myImage.getAttribute("src") ==
+    "https://devsprouthosting.com/images/chicken.jpg"
+  ) {
+    myImage.setAttribute("src", "https://devsprouthosting.com/images/egg.jpg");
+  } else {
+    //manipular a src da imagem e reatribuir um novo caminh
+    myImage.setAttribute(
+      "src",
+      "https://devsprouthosting.com/images/chicken.jpg"
+    );
   }
 }
+
+function changeBox() {
+  let myContainer = document.getElementById("container");
+  console.log(myContainer);
+
+  myContainer.style.textAlign = "center";
+
+  let myImage = document.querySelector("img");
+  myImage.style.width = "150px";
+  myImage.style.borderRadius = "50%";
+}
+
+// let myLis = document.getElementsByClassName('toclevel-1');
+
+// for(let element of myLis){
+//   element.style.backgroundColor = 'red';
+// }
+
+// console.log(myLis)
+
+//PP25
+// let mySpans = document.querySelectorAll("span");
+// console.log(mySpans);
+
+// const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+// let index = 0;
+
+// // mySpans[0].style.color=colors[0]
+// // mySpans[1].style.color=colors[1]
+// // mySpans[2].style.color=colors[2]
+
+// for (let element of mySpans) {
+//     element.style.color = colors[index];
+//     index = index +1;
+// }
+
+let myDiv = document.querySelector('.toctitle');
+//adicionar uma class
+// myDiv.classList.add('classChange')
+
+// remove a classe
+// myDiv.classList.remove('toctitle')
+
+//validar se tem uma classe (retorna verdadeiro ou falso - para usar p exemplo dentro de ifs)
+console.log(myDiv.classList.contains('toctitle'))

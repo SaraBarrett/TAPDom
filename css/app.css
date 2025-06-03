@@ -45,3 +45,9 @@ img.square {
     width: 55px;
     height: 55px;
 }
+
+
+.classChange{
+    border: 1px solid black;
+    background-color: aqua;
+}
