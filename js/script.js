@@ -1,3 +1,4 @@
+let myBtn = document.querySelector('#login');
 //seleccionar elementos pelo seu id
 // let myHistoryTag = document.getElementById('History');
 
@@ -131,19 +132,75 @@ function changeBox() {
 // //validar se tem uma classe (retorna verdadeiro ou falso - para usar p exemplo dentro de ifs)
 // console.log(myDiv.classList.contains('toctitle'))
 
-function changeHighlight(){
-  let myLis = document.querySelectorAll('li');
+function changeHighlight() {
+  let myLis = document.querySelectorAll("li");
 
-  for(let element of myLis){
-    if(element.classList.contains('highlight')){
+  for (let element of myLis) {
+    if (element.classList.contains("highlight")) {
       //remove
-      element.classList.remove('highlight')
-    }else{
+      element.classList.remove("highlight");
+    } else {
       //add
-      element.classList.add('highlight')
+      element.classList.add("highlight");
     }
-    console.log(element)
+    console.log(element);
+  }
+}
+
+function addP() {
+  //criar elemento
+  const newP = document.createElement("p");
+  newP.textContent = "Parabéns, estás quase a chegar ao fim de JS";
+
+  const myATag = document.createElement("a");
+  myATag.textContent = "clica aqui";
+  myATag.href = "../exs/grocery.html";
+
+  newP.appendChild(myATag);
+
+  //dizer de quem ele é filho
+  myBody = document.querySelector("body");
+  myBody.appendChild(newP);
+}
+
+function addCumplimentName() {
+  myH1 = document.querySelector("h1");
+
+  //myH1.innerText = 'Sara';
+
+  console.log(myH1.innerText.includes(" Sara"));
+
+  if (!myH1.innerText.includes(" Sara")) {
+    myH1.append(" Sara");
+  }else{
+    myH1.remove();
   }
 
+
 }
+
+
+function createBtn() {
+
+  let myContainer = document.getElementById("container");
+  let contador = 1;
+
+    while (contador<101){
+        let newBtn = document.createElement("button");
+        newBtn.innerText = "Novo Btn" +contador;
+        myContainer.appendChild(newBtn);
+        contador = contador+1;
+    }
+    
+
+
+}
+
+
+
+myBtn.onclick = addCumplimentName;
+
+
+//mais eficiente
+myBtn.addEventListener('click', addCumplimentName);
 
