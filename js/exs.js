@@ -55,18 +55,34 @@ if(btnGd){
 // }
 
 
-grocery.addEventListener('submit', function(e){
-    e.preventDefault();
+// grocery.addEventListener('submit', function(e){
+//     e.preventDefault();
 
-    let myPrd = document.querySelector('input').value;
-    let myQt = document.querySelector('#qt').value;
-    let myUl = document.querySelector('ul');
+//     let myPrd = document.querySelector('input').value;
+//     let myQt = document.querySelector('#qt').value;
+//     let myUl = document.querySelector('ul');
 
-    let myItem = document.createElement('li');
-    myItem.innerText = myPrd +'-'+myQt;
+//     let myItem = document.createElement('li');
+//     myItem.innerText = myPrd +'-'+myQt;
 
-    myUl.appendChild(myItem);
+//     myUl.appendChild(myItem);
 
-    grocery.reset();
+//     grocery.reset();
 
-})
+// })
+
+
+const getFacts = async() => {
+    //caminho do postman
+    const res = await fetch('https://catfact.ninja/facts');
+    const data = await res.json();
+
+    return data;
+} 
+
+const getData = async() => {
+    let result = await getFacts();
+    console.log(result)
+}
+
+getData()
